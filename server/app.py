@@ -44,8 +44,8 @@ class Newsletters(Resource):
     
     def post(self):
         new_record = Newsletter(
-            title=request.fomr['title'],
-            body=request.fomr['body']
+            title=request.form['title'],
+            body=request.form['body']
         )
         db.session.add(new_record)
         db.session.commit()
